@@ -86,7 +86,7 @@ zabbix_export:
           item_prototypes:
             -
               uuid: a7f233ee716740a0b35600d07c8f7408
-              name: '$1 Administration status'
+              name: '{#IFDESCR} Administration status'
               type: SNMP_AGENT
               snmp_oid: '1.3.6.1.2.1.2.2.1.7.{#SNMPINDEX}'
               key: 'ifAdminStatus[{#IFDESCR}]'
@@ -100,7 +100,7 @@ zabbix_export:
                   value: 'Administrator Status'
             -
               uuid: 76b89db9057c48579e6889170bc52496
-              name: '$1 Incoming'
+              name: '{#IFDESCR} Incoming'
               type: SNMP_AGENT
               snmp_oid: '1.3.6.1.2.1.2.2.1.10.{#SNMPINDEX}'
               key: 'ifInOctets[{#IFDESCR}]'
@@ -122,7 +122,7 @@ zabbix_export:
                   value: Network
             -
               uuid: adf48ec0525442cba2f748545a1c3013
-              name: '$1 Operation status'
+              name: '{#IFDESCR} Operation status'
               type: SNMP_AGENT
               snmp_oid: '1.3.6.1.2.1.2.2.1.8.{#SNMPINDEX}'
               key: 'ifOperStatus[{#IFDESCR}]'
@@ -136,7 +136,7 @@ zabbix_export:
                   value: 'Operation Status'
             -
               uuid: 540e8b220d6c4f23bbded00e67013efc
-              name: '$1 Outgoing'
+              name: '{#IFDESCR} Outgoing'
               type: SNMP_AGENT
               snmp_oid: '1.3.6.1.2.1.2.2.1.16.{#SNMPINDEX}'
               key: 'ifOutOctets[{#IFDESCR}]'
